@@ -1,0 +1,40 @@
+author="Styx and Yokon";
+onLoadName = "Altis Assault V1.0A";
+OnLoadMission = "Secure Altis";
+overviewPicture = "loading.jpg";
+enableDebugConsole = 2;
+
+class header
+{
+		GameType = coop;
+		minplayers = 1;
+		maxplayers = 20;
+};
+
+class CfgMusic
+{
+ tracks[]={song1};
+ 
+ class track1
+        {
+        name = "song1";
+        sound[] = {"\music\song1.ogg", db+1, 1.0};
+        };
+ class track2
+        {
+        name = "song2";
+        sound[] = {"\music\song2.ogg", db+1, 1.0};
+        };
+};
+
+class CfgFunctions
+{
+	#include "defines\Functions.h"
+};
+
+class CfgNotifications
+{
+	#include "defines\Notifications.h"
+};
+
+#include "G_Revive\G_Desc_Include.hpp"
