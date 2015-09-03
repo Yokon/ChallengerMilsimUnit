@@ -31,7 +31,7 @@ if (firstMission) then {
 while {!callToStart} do {
   sleep 5;
 };
-
+//Hot Fix
 callToStart = false; //reset the switch...
 firstMission = false;
 marker setMarkerAlpha 1;
