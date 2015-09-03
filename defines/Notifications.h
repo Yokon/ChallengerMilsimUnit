@@ -14,11 +14,11 @@ class CompletedCaptured
 	duration = 5;
 	priority = 1;
 };
-class missionFailed
+class missionFailedDefault
 {
-	title = "Mission Failed -- %2";
-	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
-	description = "Failed to Capture %1";
+	title = "Mission Failed -- %1";
+	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+	description = "Failed to Capture %2";
 	duration = 5;
 	priority = 1;
 };
@@ -27,6 +27,14 @@ class adminSkip
 	title = "Mission Skipped";
 	iconPicture = "";
 	description = "Admin skipped Mission";
+	duration = 5;
+	priority = 1;
+};
+class missionFailedTime
+{
+	title = "Failed - Time Limit Reached";
+	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+	description = "Failed to Capture %1 In Time...";
 	duration = 5;
 	priority = 1;
 };
