@@ -1,4 +1,3 @@
-//if (!isServer) exitWith {};
 // 0 = location
 // 1 = Mission Type (Later Expansion) {0 = capture}
 _location = _this select 0;

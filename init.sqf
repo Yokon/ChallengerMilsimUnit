@@ -19,8 +19,8 @@ else
 
 [] execVM "G_Revive_init.sqf";
 
-//if((isDedicated) || (isServer)) then
-//{
+if(isServer) then
+{
 	[]execVM "missions\cfgMissions.sqf";
-	call core_fnc_missionExecute;
-//};
+	[]execVM "missions\functions\core\fn_missionExecute.sqf";
+};

@@ -7,6 +7,7 @@ class Mission_Core
 		class missionCore {};
 		class varConf {};
 		class missionExecute {};
+		class holdMissions {};
 	};
 };
 class Mission_Client
