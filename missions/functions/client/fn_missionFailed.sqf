@@ -1,13 +1,21 @@
 _strCity = _this select 0;
-_missionID = _this select 1;
+_causeID = _this select 1;
 
-//0 = TimeLimit
-
-switch (_missionID) do { 
-	case 0 :
-	{  
-		["missionFailedTime",[_strCity]] call bis_fnc_showNotification;
+switch (_causeID) do { 
+	case 0 : 
+	{
+		_cause = "Time Limit"
 	}; 
+
+	default 
+	{
+		exitWith { hint "ERROR" };
+	}; 
+};
+
+["missionFailed",[_strCity,_cause]] call bis_fnc_showNotification;
+
+if(isServer) then
+{
 	
-	default {  hint "ERROR"; };
 };

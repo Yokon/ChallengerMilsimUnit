@@ -4336,9 +4336,10 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="playMusic ""track2"";60 fadeMusic 0;";
+			expActiv="60 fadeMusic 0;";
 			class Effects
 			{
+				track="track2";
 			};
 		};
 		class Item4
@@ -4348,12 +4349,12 @@ class Mission
 			b=200;
 			angle=-136.009;
 			activationBy="WEST";
-			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="playMusic ""track1"";60 fadeMusic 0;";
+			expActiv="60 fadeMusic 0;";
 			class Effects
 			{
+				track="track1";
 			};
 		};
 	};
