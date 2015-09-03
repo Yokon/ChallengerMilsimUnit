@@ -1,5 +1,6 @@
 [] execVM "zlt_fastrope.sqf";
 [["blacklisted ground/sea vehicles"],["blacklisted helicopters"]] execVM "scripts\lift_init.sqf";
+[] execVM "module_chatIntercept\init.sqf";
 
 G_isDedicated = false;
 G_isServer = false;
@@ -24,3 +25,4 @@ if(isServer) then
 	[]execVM "missions\cfgMissions.sqf";
 	[]execVM "missions\functions\core\fn_missionExecute.sqf";
 };
+
