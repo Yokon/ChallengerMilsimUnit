@@ -6,10 +6,8 @@ _militarizeMenAmount = _this select 4;
 _missionType = _this select 5;
 _percBuilding = _this select 6;
 _spawnMen = _this select 7;
-_spawnGroundVehicles = _this select 8;
-_spawnAirVehicles = _this select 9;
-_spawnWaterVehicles = _this select 10;
-_vehicleAmount = _this select 11;
+_vehicleArray = _this select 8;
+_vehicleAmount = _this select 9;
 
 _trDist = _objDist + 50;
 
@@ -31,9 +29,9 @@ _markerBound setMarkerAlpha 0;
 _markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,_objDist,[_spawnMen,false],[_spawnGroundVehicles,_spawnAirVehicles,_spawnWaterVehicles],false,_militarizeMenAmount,_vehicleAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
-sleep 2;
-["Capture",2,true,1,_percBuilding,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
+["Capture",2,_objDist,[true,false],[true,false,true],false,[20,10],[2,3],aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
+sleep 10;
+["Capture",2,true,1,[5,5],_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
