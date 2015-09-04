@@ -3071,6 +3071,7 @@ class Mission
 					id=99;
 					side="WEST";
 					vehicle="rhsusf_usmc_marpat_wd_squadleader";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
