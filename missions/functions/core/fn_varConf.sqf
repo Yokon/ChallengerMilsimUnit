@@ -11,6 +11,13 @@ switch (_location) do
 		MarkPosX = 14119.3;
 		MarkPosY = 18771.4;
 		objDist = 400;
+		unitAmount = 0.075;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -20,6 +27,13 @@ switch (_location) do
 		MarkPosX = 9323.11;
 		MarkPosY = 15868.7;
 		objDist = 450;
+		unitAmount = 0.075;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -29,6 +43,13 @@ switch (_location) do
 		MarkPosX = 18213;
 		MarkPosY = 15307.9;
 		objDist = 400;
+		unitAmount = 0.075;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -38,6 +59,13 @@ switch (_location) do
 		MarkPosX = 19404.744;
 		MarkPosY = 13250.399;
 		objDist = 180;
+		unitAmount = 0.1;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -47,6 +75,13 @@ switch (_location) do
 		MarkPosX = 10974;
 		MarkPosY = 13387.9;
 		objDist = 300;
+		unitAmount = 0.09;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -56,6 +91,13 @@ switch (_location) do
 		MarkPosX = 17100.3;
 		MarkPosY = 12801.3;
 		objDist = 750;
+		unitAmount = 0.05;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -65,6 +107,13 @@ switch (_location) do
 		MarkPosX = 27020.8;
 		MarkPosY = 23229.4;
 		objDist = 200;
+		unitAmount = 0.1;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -74,6 +123,13 @@ switch (_location) do
 		MarkPosX = 7149.2;
 		MarkPosY = 16481.2;
 		objDist = 190;
+		unitAmount = 0.075;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -83,6 +139,13 @@ switch (_location) do
 		MarkPosX = 8639.84;
 		MarkPosY = 18265.4;
 		objDist = 190;
+		unitAmount = 0.12;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 	
@@ -92,6 +155,13 @@ switch (_location) do
 		MarkPosX = 10325.2;
 		MarkPosY = 19060;
 		objDist = 120;
+		unitAmount = 0.1;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -101,6 +171,13 @@ switch (_location) do
 		MarkPosX = 4569.57;
 		MarkPosY = 21393.8;
 		objDist = 150;
+		unitAmount = 0.1;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 	
@@ -110,6 +187,13 @@ switch (_location) do
 		MarkPosX = 12827.3;
 		MarkPosY = 19657;
 		objDist = 150;
+		unitAmount = 0.1;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 	
@@ -119,6 +203,13 @@ switch (_location) do
 		MarkPosX = 9161.9;
 		MarkPosY = 21567.9;
 		objDist = 170;
+		unitAmount = 0.15;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 
@@ -128,6 +219,13 @@ switch (_location) do
 		MarkPosX = 5089.88;
 		MarkPosY = 11261.6;
 		objDist = 200;
+		unitAmount = 0.15;
+		percBuilding = 50;
+		spawnMen = true;
+		spawnGroundVehicles = true;
+		spawnAirVehicles = false;
+		spawnWaterVehicles = false;
+		vehicleAmount = [4,2];
 		missionType = _MType;
 	};
 	
@@ -140,7 +238,7 @@ switch (_location) do
 
 sleep 3;
 
-[cityName, MarkPosX, MarkPosY, objDist, missionType] spawn core_fnc_missionCore;
+[cityName, MarkPosX, MarkPosY, objDist, unitAmount, missionType, percBuilding, spawnMen, spawnGroundVehicles, spawnAirVehicles, spawnWaterVehicles, vehicleAmount] spawn core_fnc_missionCore;
 
 sleep 3;
 
@@ -149,3 +247,10 @@ MarkPosX = nil;
 MarkPosY = nil;
 objDist = nil;
 missionType = nil;
+unitAmount = nil;
+percBuilding = nil;
+spawnMen = nil;
+spawnGroundVehicles = nil;
+spawnAirVehicles = nil;
+spawnWaterVehicles = nil;
+vehicleAmount = nil;

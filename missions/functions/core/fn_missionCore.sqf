@@ -2,7 +2,14 @@ _cityName = _this select 0;
 _MarkPosX = _this select 1;
 _MarkPosY = _this select 2;
 _objDist = _this select 3;
-_missionType = _this select 4;
+_militarizeMenAmount = _this select 4;
+_missionType = _this select 5;
+_percBuilding = _this select 6;
+_spawnMen = _this select 7;
+_spawnGroundVehicles = _this select 8;
+_spawnAirVehicles = _this select 9;
+_spawnWaterVehicles = _this select 10;
+_vehicleAmount = _this select 11;
 
 _trDist = _objDist + 50;
 
@@ -24,15 +31,15 @@ _markerBound setMarkerAlpha 0;
 _markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,_objDist,[true,false],[true,false,false],false,[10,5],[3,0],[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,1] execVM "LV\militarize.sqf";
+["Capture",2,_objDist,[_spawnMen,false],[_spawnGroundVehicles,_spawnAirVehicles,_spawnWaterVehicles],false,_militarizeMenAmount,_vehicleAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
 sleep 2;
-["Capture",2,true,1,[10,5],_objDist,[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,2] execVM "LV\fillHouse.sqf";
+["Capture",2,true,1,_percBuilding,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
   callToStart = true;
-  [{systemChat format["Stand By\nInitializing"];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
-  sleep 5;
+  [{systemChat format["Stand By Initializing"];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+  sleep 30;
 };
 
 while {!callToStart} do {
@@ -51,7 +58,7 @@ missionActive = true;
 
 //Define the variables for the missions loop...
 _unitCount = 1; //Keep this at 1, otherwise the while will breakout.
-_timeLimit = 1443; //4 hours in seconds... (plus 3 seconds)
+_timeLimit = 10800; //4 hours in seconds... (plus 3 seconds)
 
 sleep 5;
 
@@ -60,15 +67,13 @@ while {_kilo > 0} do {
 	_unitCount = 0;{
 		if(side _x == opfor && ([_MarkPosX,_MarkPosY] distance _x < _trDist)) then {
 			_unitCount = _unitCount + 1;
-			/*if (_unitCount <= 5 ) then {
-			  	[] spawn core_fnc_setUnitMarker;
-			};*/
+			[[_unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
 		}
 	} foreach allUnits;
 	
 	_timeLimit = _timeLimit - 3;
 
-	hintSilent format ["_unitCount is %1", _unitCount];
+	//hintSilent format ["_unitCount is %1", _unitCount];
 	if ( _unitCount <= 0 ) then {
 	  _kilo = 0;
 	  missionEndID = 0;

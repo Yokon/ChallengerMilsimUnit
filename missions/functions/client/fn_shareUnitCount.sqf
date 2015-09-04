@@ -1,0 +1,1 @@
+countTroops = _this select 0;
