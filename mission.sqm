@@ -1417,6 +1417,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
+					init="this setGroupID [""Paladin""];";
 					description="Tank Commander";
 					syncId=1;
 					synchronizations[]={9,17,22};
@@ -1440,6 +1441,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=1;
+					init="this setGroupID [""Warhawk""];";
 					description="F/A-18 Pilot";
 					syncId=2;
 					synchronizations[]={9,15,22};
@@ -1500,6 +1502,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
+					init="this setGroupID [""Hammer""];";
 					syncId=3;
 					synchronizations[]={9,18,22};
 				};
@@ -2330,6 +2333,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=1;
+					init="this setGroupID [""Nimbus""];";
 					description="Helicopter Pilot";
 					syncId=13;
 					synchronizations[]={9,16,22};
@@ -2862,7 +2866,7 @@ class Mission
 					leader=1;
 					rank="CAPTAIN";
 					skill=1;
-					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addItemToUniform ""FirstAidKit"";  this addItemToUniform ""H_Watchcap_camo"";  this addVest ""rhsusf_iotv_ocp_Teamleader"";  for ""_i"" from 1 to 4 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_Stanag"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShellGreen"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShellRed"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_red"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_7x45acp_MHP"";};  this addBackpack ""tf_rt1523g_big"";  this addHeadgear ""rhsusf_patrolcap_ocp"";  this addGoggles ""rhs_googles_black"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_m4a1_carryhandle"";  this addPrimaryWeaponItem ""rhsusf_acc_SFMB556"";  this addWeapon ""rhsusf_weap_m1911a1"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
+					init="this setGroupID [""Command""];comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addItemToUniform ""FirstAidKit"";  this addItemToUniform ""H_Watchcap_camo"";  this addVest ""rhsusf_iotv_ocp_Teamleader"";  for ""_i"" from 1 to 4 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_Stanag"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShellGreen"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShellRed"";};  for ""_i"" from 1 to 4 do {this addItemToVest ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_red"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_7x45acp_MHP"";};  this addBackpack ""tf_rt1523g_big"";  this addHeadgear ""rhsusf_patrolcap_ocp"";  this addGoggles ""rhs_googles_black"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_m4a1_carryhandle"";  this addPrimaryWeaponItem ""rhsusf_acc_SFMB556"";  this addWeapon ""rhsusf_weap_m1911a1"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
 					description="Captain (High Command)";
 					syncId=19;
 					synchronizations[]={20,21};
@@ -2989,7 +2993,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
-					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_FullGhillie_ard"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""7Rnd_408_Mag"";};  this addVest ""V_HarnessO_gry"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 5 do {this addItemToVest ""7Rnd_408_Mag"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShell"";};  this addItemToVest ""SmokeShellGreen"";  this addBackpack ""tf_mr3000_multicam"";  this addGoggles ""G_Bandanna_khk"";    comment ""Add weapons"";  this addWeapon ""srifle_LRR_camo_F"";  this addPrimaryWeaponItem ""optic_LRPS"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
+					init="this setGroupID [""Specter""];comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_FullGhillie_ard"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""7Rnd_408_Mag"";};  this addVest ""V_HarnessO_gry"";  this addItemToVest ""FirstAidKit"";  for ""_i"" from 1 to 5 do {this addItemToVest ""7Rnd_408_Mag"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShell"";};  this addItemToVest ""SmokeShellGreen"";  this addBackpack ""tf_mr3000_multicam"";  this addGoggles ""G_Bandanna_khk"";    comment ""Add weapons"";  this addWeapon ""srifle_LRR_camo_F"";  this addPrimaryWeaponItem ""optic_LRPS"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
 					syncId=23;
 					synchronizations[]={24};
 				};
@@ -3075,6 +3079,7 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
+					init="this setGroupID [""Spartan""];";
 					description="(Marine) Squad Leader";
 					syncId=25;
 					synchronizations[]={26,22};
