@@ -58,6 +58,79 @@ switch (_location) do
 		objDist = 750;
 		missionType = _MType;
 	};
+
+	case "Molos" : 
+	{
+		cityName = "Molos";
+		MarkPosX = 27020.8;
+		MarkPosY = 23229.4;
+		objDist = 200;
+		missionType = _MType;
+	};
+
+	case "Kore" : 
+	{
+		cityName = "Kore";
+		MarkPosX = 7149.2;
+		MarkPosY = 16481.2;
+		objDist = 190;
+		missionType = _MType;
+	};
+
+	case "Syrta" : 
+	{
+		cityName = "Syrta";
+		MarkPosX = 8639.84;
+		MarkPosY = 18265.4;
+		objDist = 190;
+		missionType = _MType;
+	};
+	
+	case "Galati" : 
+	{
+		cityName = "Galati";
+		MarkPosX = 10325.2;
+		MarkPosY = 19060;
+		objDist = 120;
+		missionType = _MType;
+	};
+
+	case "Oreokastro" : 
+	{
+		cityName = "Oreokastro";
+		MarkPosX = 4569.57;
+		MarkPosY = 21393.8;
+		objDist = 150;
+		missionType = _MType;
+	};
+	
+	case "Ifestiona" : 
+	{
+		cityName = "Ifestiona";
+		MarkPosX = 12827.3;
+		MarkPosY = 19657;
+		objDist = 150;
+		missionType = _MType;
+	};
+	
+	case "North Airfield" : 
+	{
+		cityName = "North Airfield";
+		MarkPosX = 9161.9;
+		MarkPosY = 21567.9;
+		objDist = 170;
+		missionType = _MType;
+	};
+
+	case "Panochori" : 
+	{
+		cityName = "Panochori";
+		MarkPosX = 5089.88;
+		MarkPosY = 11261.6;
+		objDist = 200;
+		missionType = _MType;
+	};
+	
 	default
 	{
 		hint "Failed";
