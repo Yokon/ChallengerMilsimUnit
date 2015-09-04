@@ -136,7 +136,16 @@ switch (_location) do
 		hint "Failed";
 	};
 };
+
+
 sleep 3;
-execVM "missions\functions\core\fn_missionCore.sqf";
-//call core_fnc_missionCore;
+
+[cityName, MarkPosX, MarkPosY, objDist, missionType] spawn core_fnc_missionCore;
+
 sleep 3;
+
+cityName = nil;
+MarkPosX = nil;
+MarkPosY = nil;
+objDist = nil;
+missionType = nil;

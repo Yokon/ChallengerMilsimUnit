@@ -1,20 +1,20 @@
 if (isServer) then {
-  []execVM "missions\functions\core\fn_missionExecute.sqf";
+  [] spawn core_fnc_missionExecute;
 };
 
-hintSilent "Standby\n5 Minutes";
+systemChat format["Standby 5 Minutes"];
 sleep 60;
-hintSilent "Standby\n4 Minutes";
+systemChat format["Standby 4 Minutes"];
 sleep 60;
-hintSilent "Standby\n3 Minutes";
+systemChat format["Standby 3 Minutes"];
 sleep 60;
-hintSilent "Standby\n2 Minutes";
+systemChat format["Standby 2 Minutes"];
 sleep 60;
-hintSilent "Standby\n1 Minute";
+systemChat format["Standby 1 Minute"];
 sleep 30;
-hintSilent "Standby\n30 Seconds";
+systemChat format["Standby 30 Seconds"];
 sleep 20;
-hintSilent "Standby\n10 Seconds";
+systemChat format["Standby 10 Seconds"];
 sleep 10;
 
 

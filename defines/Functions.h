@@ -4,10 +4,12 @@ class Mission_Core
 	class Mission 
 	{
 		file = "missions\functions\core";
-		class missionCore {};
-		class varConf {};
-		class missionExecute {};
-		class holdMissions {};
+		class missionCore {recompile = 1};
+		class varConf {recompile = 1};
+		class missionExecute {recompile = 1};
+		class holdMissions {recompile = 1};
+		class initMission {recompile = 1};
+		class setUnitMarker {recompile = 1};
 	};
 };
 class Mission_Client
@@ -16,8 +18,8 @@ class Mission_Client
 	class Client
 	{
 		file = "missions\functions\client";
-		class startMission {};
-		class missionComplete {};
-		class missionFailed {};
+		class startMission {recompile = 1};
+		class missionComplete {recompile = 1};
+		class missionFailed {recompile = 1};
 	};
 };

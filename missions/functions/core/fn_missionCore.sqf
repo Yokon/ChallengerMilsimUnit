@@ -1,92 +1,105 @@
-_trDist = objDist + 50;
-//Objective Marker
-marker = createMarker["Capture", [MarkPosX,MarkPosY]];
-marker setMarkerShape "icon";
-marker setMarkerType "hd_objective";
-marker setMarkerColor "ColorRed";
-marker setMarkerText "Capture";
-marker setMarkerAlpha 0;
-marker setMarkerSize [1,1];
+_cityName = _this select 0;
+_MarkPosX = _this select 1;
+_MarkPosY = _this select 2;
+_objDist = _this select 3;
+_missionType = _this select 4;
 
-//Bounding Marker
-markerBound = createMarker["ObjBound", [MarkPosX,MarkPosY]];
-markerBound setMarkerShape "Ellipse";
-markerBound setMarkerBrush "FDIAGONAL";
-markerBound setMarkerColor "ColorRed";
-markerBound setMarkerAlpha 0;
-markerBound setMarkerSize [objDist,objDist];
+_trDist = _objDist + 50;
+
+// Objective marker
+_marker = createMarker["Capture", [_MarkPosX,_MarkPosY]];
+_marker setMarkerShape "icon";
+_marker setMarkerType "hd_objective";
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText "Capture";
+_marker setMarkerAlpha 0;
+_marker setMarkerSize [1,1];
+
+//Bounding _marker
+_markerBound = createMarker["ObjBound", [_MarkPosX,_MarkPosY]];
+_markerBound setMarkerShape "Ellipse";
+_markerBound setMarkerBrush "FDIAGONAL";
+_markerBound setMarkerColor "ColorRed";
+_markerBound setMarkerAlpha 0;
+_markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,objDist,[true,false],[true,false,false],false,[10,5],[3,0],[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,1] execVM "LV\militarize.sqf";
+["Capture",2,_objDist,[true,false],[true,false,false],false,[10,5],[3,0],[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,1] execVM "LV\militarize.sqf";
 sleep 2;
-["Capture",2,true,1,[10,5],objDist,[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,2] execVM "LV\fillHouse.sqf";
+["Capture",2,true,1,[10,5],_objDist,[0.3,0.3,0.3,0.3,0.3,0.5,0.5,0.5,0.5,0.5],nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
   callToStart = true;
-  [{hintSilent "Stand By\nInitializing";},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
-  sleep 30;
+  [{systemChat format["Stand By\nInitializing"];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+  sleep 5;
 };
 
 while {!callToStart} do {
   sleep 5;
 };
-//Hot Fix
-callToStart = false; //reset the switch...
+//reset the switch...
+callToStart = false;
 firstMission = false;
-marker setMarkerAlpha 1;
-markerBound setMarkerAlpha 1;
 
-//[{[cityName] call MMC_fnc_startMission;},"BIS_fnc_spawn",true,true] call BIS_fnc_MP; //Client Dialogs
-[[[cityName],"missions\functions\client\fn_startMission.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
+//Make Markers Visible. Start the mission...
+_marker setMarkerAlpha 1;
+_markerBound setMarkerAlpha 1;
+
+[[_cityName],"MMC_fnc_startMission",true,false] call BIS_fnc_MP;
 missionActive = true;
 
 //Define the variables for the missions loop...
-unitCount = 1; //Keep this at one, otherwise the while will breakout.
-timeLimit = 1443; //4 hours in seconds... (plus 3 seconds)
+_unitCount = 1; //Keep this at 1, otherwise the while will breakout.
+_timeLimit = 1443; //4 hours in seconds... (plus 3 seconds)
 
 sleep 5;
 
 _kilo = 1;
 while {_kilo > 0} do {
-	unitCount = 0;{
-		if(side _x == opfor && ([MarkPosX,MarkPosY] distance _x < _trDist)) then {
-			unitCount = unitCount + 1;
+	_unitCount = 0;{
+		if(side _x == opfor && ([_MarkPosX,_MarkPosY] distance _x < _trDist)) then {
+			_unitCount = _unitCount + 1;
+			/*if (_unitCount <= 5 ) then {
+			  	[] spawn core_fnc_setUnitMarker;
+			};*/
 		}
 	} foreach allUnits;
 	
-	timeLimit = timeLimit - 3;
+	_timeLimit = _timeLimit - 3;
 
-	//hintSilent format ["unitCount is %1", unitCount];
-	sleep 3;
-	if (unitCount <= 0) then {
+	hintSilent format ["_unitCount is %1", _unitCount];
+	if ( _unitCount <= 0 ) then {
 	  _kilo = 0;
 	  missionEndID = 0;
 	};
-	if (timeLimit <= 0) then {
+	if ( _timeLimit <= 0 ) then {
 	  _kilo = 0;
 	  missionEndID = 1;
 	};
+	countTroops = _unitCount;
+	sleep 3;
 };
-
 
 deleteMarker "Capture";
 deleteMarker "ObjBound";
 
 {    
-	if(side _x == opfor && ([MarkPosX,MarkPosY] distance _x < objDist)) then 
+	if(side _x == opfor) then 
 	{     
 		_x setdamage 1.0;   
 	}   
 } foreach allUnits;
 
-if (missionEndID == 0) then 
+missionActive = false;
+
+if ( missionEndID == 0 ) then 
 {
-	[[[],"missions\functions\core\fn_holdMissions.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
-	[[[cityName],"missions\functions\client\fn_missionComplete.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
+	[[],"core_fnc_holdMissions",true,false] call BIS_fnc_MP;
+	[[_cityName],"MMC_fnc_missionComplete",true,false] call BIS_fnc_MP;
 }; 
-if (missionEndID == 1) then 
+if ( missionEndID == 1 ) then 
 {
-	[[[],"missions\functions\core\fn_holdMissions.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
-	[[[cityName,0],"missions\functions\client\fn_missionFailed.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
+	[[],"core_fnc_holdMissions",true,false] call BIS_fnc_MP;
+	[[_cityName,0],"MMC_fnc_missionFailed",true,false] call BIS_fnc_MP;
 };

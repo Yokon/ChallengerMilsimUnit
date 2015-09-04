@@ -20,9 +20,6 @@ else
 
 [] execVM "G_Revive_init.sqf";
 
-if(isServer) then
-{
 	[]execVM "missions\cfgMissions.sqf";
-	[]execVM "missions\functions\core\fn_missionExecute.sqf";
-};
+	[] spawn core_fnc_initMission;
 
