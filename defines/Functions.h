@@ -21,5 +21,6 @@ class Mission_Client
 		class startMission {recompile = 1};
 		class missionComplete {recompile = 1};
 		class missionFailed {recompile = 1};
+		class shareUnitCount {recompile = 1};
 	};
 };

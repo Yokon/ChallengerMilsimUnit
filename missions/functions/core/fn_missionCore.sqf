@@ -2,12 +2,11 @@ _cityName = _this select 0;
 _MarkPosX = _this select 1;
 _MarkPosY = _this select 2;
 _objDist = _this select 3;
-_militarizeMenAmount = _this select 4;
-_missionType = _this select 5;
-_percBuilding = _this select 6;
-_spawnMen = _this select 7;
-_vehicleArray = _this select 8;
-_vehicleAmount = _this select 9;
+_missionType = _this select 4;
+_milAmount = _this select 5;
+_fillHouse = _this select 6;
+_vehAmount = _this select 7;
+_vehSpawn = _this select 8;
 
 _trDist = _objDist + 50;
 
@@ -29,9 +28,9 @@ _markerBound setMarkerAlpha 0;
 _markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,_objDist,[true,false],[true,false,true],false,[20,10],[2,3],aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
+["Capture",2,_objDist,[true,false],_vehSpawn,false,_milAmount,_vehAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
 sleep 10;
-["Capture",2,true,1,[5,5],_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
+["Capture",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
@@ -57,7 +56,6 @@ missionActive = true;
 //Define the variables for the missions loop...
 _unitCount = 1; //Keep this at 1, otherwise the while will breakout.
 _timeLimit = 10800; //4 hours in seconds... (plus 3 seconds)
-
 sleep 5;
 
 _kilo = 1;
@@ -65,13 +63,15 @@ while {_kilo > 0} do {
 	_unitCount = 0;{
 		if(side _x == opfor && ([_MarkPosX,_MarkPosY] distance _x < _trDist)) then {
 			_unitCount = _unitCount + 1;
-			[[_unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
+			_unitPos = getPos _x;
+			if (_unitCount <= 5) then {
+				[_unitCount, _unitPos] spawn core_fnc_setUnitMarker;
+			};
 		}
 	} foreach allUnits;
 	
 	_timeLimit = _timeLimit - 3;
 
-	//hintSilent format ["_unitCount is %1", _unitCount];
 	if ( _unitCount <= 0 ) then {
 	  _kilo = 0;
 	  missionEndID = 0;
@@ -86,6 +86,12 @@ while {_kilo > 0} do {
 
 deleteMarker "Capture";
 deleteMarker "ObjBound";
+deleteMarker "unit0";
+deleteMarker "unit1";
+deleteMarker "unit2";
+deleteMarker "unit3";
+deleteMarker "unit4";
+deleteMarker "unit5";
 
 {    
 	if(side _x == opfor) then 
