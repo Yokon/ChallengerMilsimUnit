@@ -2,7 +2,7 @@ author="Styx and Yokon";
 onLoadName = "Altis Assault V1.0A";
 OnLoadMission = "Secure Altis";
 overviewPicture = "loading.jpg";
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 
 class header
 {
