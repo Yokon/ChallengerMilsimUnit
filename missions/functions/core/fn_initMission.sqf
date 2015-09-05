@@ -11,6 +11,7 @@ if !(isServer) exitWith {};
 countTroops = 0;
 
 [] execVM "missions\cfgmissions.sqf";
+[] spawn core_fnc_unitTracker;
 sleep 3;
 aiSkillSet = [aiAccuracy,aiAimShake,aiAimSpeed,aiSpotDistance,aiSpotTime,aiCourage,aiCommanding,aiGeneral,aiEndurance,aiReloadSpeed];
 firstMission = true;
