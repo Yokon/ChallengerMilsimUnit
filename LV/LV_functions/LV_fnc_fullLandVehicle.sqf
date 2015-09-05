@@ -5,7 +5,7 @@ _pos = _this select 0;
 _side = _this select 1;
 
 _BLUveh = ["B_MRAP_01_F","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","B_Quadbike_01_F","B_Truck_01_transport_F","B_Truck_01_covered_F","B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_AA_F","B_APC_Wheeled_01_cannon_F","B_MBT_01_cannon_F","B_MBT_01_arty_F","B_MBT_01_mlrs_F"];
-_OPFveh = ["RHS_UAZ_Base","rhs_uaz_vv","rhs_uaz_vdv","rhs_uaz_vmf","RHS_Ural_VV_01","RHS_Ural_VMF_01","RHS_Ural_MSV_01","RHS_Ural_Open_VV_01","RHS_Ural_Support_MSV_Base_01","RHS_Ural_Open_VDV_01","rhs_t72ba_tv","rhs_t72bc_tv","rhs_t90_tv","rhs_t80","rhs_t80a","rhs_t80u","Rhs_t80u45mm"];
+_OPFveh = ["RHS_UAZ_Base","rhs_uaz_vv","rhs_uaz_vdv","rhs_uaz_vmf","RHS_Ural_VV_01","RHS_Ural_VMF_01","RHS_Ural_MSV_01","RHS_Ural_Open_VV_01","RHS_Ural_Support_MSV_Base_01","RHS_Ural_Open_VDV_01","rhs_t72ba_tv","rhs_t72bc_tv","rhs_t90_tv","rhs_t80","rhs_t80a","rhs_t80u","Rhs_t80u45mm", "rhs_zsu234_aa", "rhs_9k79"];
 _INDveh = ["I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F","I_Quadbike_01_F","I_Truck_02_transport_F","I_Truck_02_covered_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F","I_APC_Wheeled_03_cannon_F"];
 
 _men = [];
