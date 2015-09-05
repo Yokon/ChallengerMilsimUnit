@@ -29,7 +29,7 @@ _markerBound setMarkerAlpha 0;
 _markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,_objDist,[true,false],[true,false,true],false,[20,10],[2,3],aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
+["Capture",2,_objDist,[true,false],[true,false,false],false,[20,10],[2,3],aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
 sleep 10;
 ["Capture",2,true,1,[5,5],_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
