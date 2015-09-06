@@ -1,1 +1,3 @@
-countTroops = _this select 0;
+_countTroops = _this select 0;
+
+troopCount = _countTroops;

@@ -13,7 +13,7 @@ pvpfw_chatIntercept_allCommands = [
 		"count",
 		{
 			_argument = _this select 0;
-			systemChat format["Remaining: %1",unitCount];
+			systemChat format["Remaining: %1",troopCount];
 		}
 	]
 ];

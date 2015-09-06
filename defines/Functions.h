@@ -10,7 +10,7 @@ class Mission_Core
 		class holdMissions {};
 		class initMission {};
 		class setUnitMarker {};
-		class unitTracker {};
+		class unitTracker {recompile = 1};
 	};
 };
 class Mission_Client

@@ -6,6 +6,7 @@ missionTypes = ["capture"];
 missionLocations = ["athira", "dorida", "pyrgos", "agiosDionysios", "charkia", "poliakko", "Molos", 
 "Kore", "Syrta", "Galati", "Oreokastro", "Ifestiona", "North Airfield", "Panochori"];
 
+allowMarkers = true;
 
 //AI Skill
 aiAccuracy = 0.3;
@@ -18,3 +19,7 @@ aiCommanding = 1;
 aiGeneral = 1;
 aiEndurance = 1;
 aiReloadSpeed 0.5;
+
+//Show Markers on last XX Enemies
+//MarkLastEnemies = true;
+//NumberOfEnemies = 5;

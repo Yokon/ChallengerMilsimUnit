@@ -1,3 +1,5 @@
+
+
 _cityName = _this select 0;
 _MarkPosX = _this select 1;
 _MarkPosY = _this select 2;
@@ -35,7 +37,7 @@ sleep 2;
 
 if (firstMission) then {
   callToStart = true;
-  [{systemChat format["Stand By Initializing"];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+  [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
   sleep 30;
 };
 
@@ -55,24 +57,31 @@ missionActive = true;
 
 //Define the variables for the missions loop...
 _unitCount = 1; //Keep this at 1, otherwise the while will breakout.
-_timeLimit = 10800; //4 hours in seconds... (plus 3 seconds)
-sleep 5;
+_timeLimit = 10800; //3 hours in seconds...
+trackUnitMarker = false;
 
+//Start the cycle...
 _kilo = 1;
 while {_kilo > 0} do {
-	_unitCount = 0;{
+	unitCount = 0;
+	{
 		if(side _x == opfor && ([_MarkPosX,_MarkPosY] distance _x < _trDist)) then {
-			_unitCount = _unitCount + 1;
-			_unitPos = getPos _x;
-			if (_unitCount <= 5) then {
-				[_unitCount, _unitPos] spawn core_fnc_setUnitMarker;
+			unitCount = unitCount + 1;
+			getUnitPos = position _x;
+			if (trackUnitMarker) then {
+			  [unitCount, getUnitPos] call core_fnc_setUnitMarker;
 			};
 		}
 	} foreach allUnits;
-	
+ 	if( unitCount <= 5 ) then {
+		trackUnitMarker = true;
+	} else {
+		trackUnitMarker = false;
+		_resetMarkers = 100;
+		[_resetMarkers, getUnitPos] call core_fnc_setUnitMarker;
+	};
 	_timeLimit = _timeLimit - 3;
-
-	if ( _unitCount <= 0 ) then {
+	if ( unitCount <= 0 ) then {
 	  _kilo = 0;
 	  missionEndID = 0;
 	};
@@ -80,13 +89,12 @@ while {_kilo > 0} do {
 	  _kilo = 0;
 	  missionEndID = 1;
 	};
-	countTroops = _unitCount;
+	[[unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
 	sleep 3;
 };
 
 deleteMarker "Capture";
 deleteMarker "ObjBound";
-deleteMarker "unit0";
 deleteMarker "unit1";
 deleteMarker "unit2";
 deleteMarker "unit3";
