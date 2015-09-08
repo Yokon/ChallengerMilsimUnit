@@ -5,12 +5,12 @@ class Mission_Core
 	{
 		file = "missions\functions\core";
 		class missionCore {};
-		class varConf {recompile = 1};
+		class varConf {recompile = 1;};
 		class missionExecute {};
 		class holdMissions {};
 		class initMission {};
 		class setUnitMarker {};
-		class unitTracker {recompile = 1};
+		class unitTracker {recompile = 1;};
 	};
 };
 class Mission_Client
