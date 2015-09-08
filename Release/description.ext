@@ -1,0 +1,29 @@
+author="Styx and Yokon";
+onLoadName = "Altis Assault v1.2";
+OnLoadMission = "Secure Altis";
+overviewPicture = "loading.jpg";
+enableDebugConsole = 1;
+
+class header
+{
+		GameType = coop;
+		minplayers = 1;
+		maxplayers = 20;
+};
+
+class CfgMusic
+{
+        #include "defines\sounds.h"
+};
+
+class CfgFunctions
+{
+	#include "defines\Functions.h"
+};
+
+class CfgNotifications
+{
+	#include "defines\Notifications.h"
+};
+
+#include "G_Revive\G_Desc_Include.hpp"
