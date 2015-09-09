@@ -4,6 +4,8 @@ OnLoadMission = "Secure Altis";
 overviewPicture = "loading.jpg";
 enableDebugConsole = 1;
 
+#include "VVS\menu.h"
+
 class header
 {
 		GameType = coop;
@@ -19,6 +21,7 @@ class CfgMusic
 class CfgFunctions
 {
 	#include "defines\Functions.h"
+	#include "VVS\Functions.h"
 };
 
 class CfgNotifications
