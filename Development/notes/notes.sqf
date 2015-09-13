@@ -1,3 +1,4 @@
+//[] execVM "briefing.sqf"; //Load Briefing
 waitUntil {!isNull player && player == player};
 if(player diarySubjectExists "rules")exitWith{};
 
