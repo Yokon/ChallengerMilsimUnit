@@ -2,7 +2,7 @@
 //Author: Styx
 //Description: Configuration settings for the missions module
 
-missionTypes = ["capture"];
+missionTypes = [/*"capture",*/ "hostage"];
 missionLocations = ["athira", "dorida", "pyrgos", "agiosDionysios", "charkia", "poliakko", "Molos", 
 "Kore", "Syrta", "Galati", "Oreokastro", "Ifestiona", "North Airfield", "Panochori"];
 

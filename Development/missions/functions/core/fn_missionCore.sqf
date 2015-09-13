@@ -1,4 +1,5 @@
-
+private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_missionType", "_milAmount", "_timeLimit",
+		"_trDist", "_fillHouse", "_vehAmount", "_vehSpawn", "_kilo", "_marker", "_markerBound"];
 
 _cityName = _this select 0;
 _MarkPosX = _this select 1;
@@ -15,7 +16,7 @@ _trDist = _objDist + 50;
 // Objective marker
 _marker = createMarker["Capture", [_MarkPosX,_MarkPosY]];
 _marker setMarkerShape "icon";
-_marker setMarkerType "hd_objective";
+_marker setMarkerType "mil_objective";
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Capture";
 _marker setMarkerAlpha 0;
@@ -37,7 +38,7 @@ sleep 2;
 
 if (firstMission) then {
   callToStart = true;
-  [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+  [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,false] call BIS_fnc_MP;
   sleep 30;
 };
 

@@ -90,6 +90,4 @@ _leader9Marker setMarkerText _leader9;
 _leader9Marker setMarkerSize [1,1];
 _leader9Marker setMarkerAlpha 1;
 
-sleep 1;
-
 [] spawn core_fnc_unitTracker;
