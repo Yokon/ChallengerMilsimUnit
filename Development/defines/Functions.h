@@ -46,6 +46,6 @@ class Mission_Client
 		class missionHostageStart {};
 		class missionHostageComplete {};
 		class missionHostageFailed {};
-		class fn_sharePowCount {};
+		class sharePowCount {};
 	};
 };
