@@ -443,11 +443,12 @@ class Mission
 					special="NONE";
 					id=9;
 					side="WEST";
-					vehicle="rhsusf_army_ucp_combatcrewman";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
-					description="Tank Gunner";
+					text="medic1";
+					description="Tank Gunner / Medic";
 				};
 				class Item1
 				{
@@ -678,9 +679,10 @@ class Mission
 					special="NONE";
 					id=26;
 					side="WEST";
-					vehicle="rhsusf_army_ucp_explosives";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					skill=1;
+					text="medic3";
 				};
 			};
 		};
@@ -1243,16 +1245,17 @@ class Mission
 				class Item1
 				{
 					position[]={14537.587,17.91,16737.908};
-					azimut=75.030922;
+					azimut=75.030899;
 					special="NONE";
 					id=38;
 					side="WEST";
-					vehicle="rhsusf_airforce_pilot";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=1;
+					text="medic6";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShellGreen"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""Chemlight_green"";};  this addHeadgear ""H_PilotHelmetHeli_B"";    comment ""Add weapons"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152"";  this linkItem ""ItemGPS"";  ";
-					description="Helicopter Co-Pilot";
+					description="Helicopter Co-Pilot / Medic";
 				};
 				class Item2
 				{
@@ -1749,8 +1752,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
+					text="medic2";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_cu_ocp"";  this addVest ""rhsusf_iotv_ocp_Medic"";  for ""_i"" from 1 to 5 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_Stanag"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellGreen"";};  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  this addItemToBackpack ""Medikit"";  for ""_i"" from 1 to 5 do {this addItemToBackpack ""FirstAidKit"";};  this addHeadgear ""rhsusf_ach_helmet_ESS_ocp"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_m4_carryhandle"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
-					description="Officer Cadet";
+					description="Officer Cadet / Medic";
 				};
 			};
 		};
@@ -1872,12 +1876,13 @@ class Mission
 					special="NONE";
 					id=62;
 					side="WEST";
-					vehicle="rhsusf_army_ucp_marksman";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
+					text="medic5";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_FullGhillie_ard"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_Stanag"";};  this addVest ""V_HarnessO_gry"";  for ""_i"" from 1 to 2 do {this addItemToVest ""FirstAidKit"";};  for ""_i"" from 1 to 5 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_Stanag"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellGreen"";};  this addBackpack ""rhsusf_assault_eagleaiii_ocp"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""SatchelCharge_Remote_Mag"";};  this addGoggles ""G_Bandanna_tan"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_m16a4_carryhandle_pmag"";  this addPrimaryWeaponItem ""rhsusf_acc_nt4_black"";  this addPrimaryWeaponItem ""optic_LRPS"";  this addPrimaryWeaponItem ""bipod_01_F_blk"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152_1"";  this linkItem ""ItemGPS"";  ";
-					description="Spotter";
+					description="Spotter / Medic";
 				};
 			};
 		};
@@ -2136,7 +2141,7 @@ class Mission
 				class Item1
 				{
 					position[]={15438.315,0.1983656,585.8244};
-					azimut=254.10295;
+					azimut=254.103;
 					offsetY=18;
 					special="NONE";
 					id=74;
@@ -2144,6 +2149,7 @@ class Mission
 					vehicle="rhsusf_navy_marpat_wd_medic";
 					player="PLAY CDG";
 					skill=1;
+					text="medic11";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_survival_uniform"";  this addItemToUniform ""H_Watchcap_camo"";  this addItemToUniform ""16Rnd_9x21_Mag"";  this addVest ""rhsusf_spc"";  this addBackpack ""B_Carryall_cbr"";  this addItemToBackpack ""Medikit"";  for ""_i"" from 1 to 10 do {this addItemToBackpack ""FirstAidKit"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShellGreen"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""Chemlight_green"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""B_IR_Grenade"";};  this addHeadgear ""rhsusf_ach_bare_tan_headset_ess"";    comment ""Add weapons"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc148jem_1"";  this linkItem ""ItemGPS"";  ";
 					description="Search and Rescue";
 				};
@@ -2158,13 +2164,14 @@ class Mission
 					vehicle="rhsusf_navy_marpat_wd_medic";
 					player="PLAY CDG";
 					skill=1;
+					text="medic10";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_survival_uniform"";  this addItemToUniform ""H_Watchcap_camo"";  this addItemToUniform ""16Rnd_9x21_Mag"";  this addVest ""rhsusf_spc"";  this addBackpack ""B_Carryall_cbr"";  this addItemToBackpack ""Medikit"";  for ""_i"" from 1 to 10 do {this addItemToBackpack ""FirstAidKit"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShellGreen"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""Chemlight_green"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""B_IR_Grenade"";};  this addHeadgear ""rhsusf_ach_bare_tan_headset_ess"";    comment ""Add weapons"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc148jem_1"";  this linkItem ""ItemGPS"";  ";
 					description="Search and Rescue";
 				};
 				class Item3
 				{
 					position[]={15436.615,0.055141162,590.5069};
-					azimut=254.10295;
+					azimut=254.103;
 					offsetY=18;
 					special="NONE";
 					id=76;
@@ -2172,6 +2179,7 @@ class Mission
 					vehicle="rhsusf_navy_marpat_wd_medic";
 					player="PLAY CDG";
 					skill=1;
+					text="medic9";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_survival_uniform"";  this addItemToUniform ""H_Watchcap_camo"";  this addItemToUniform ""16Rnd_9x21_Mag"";  this addVest ""rhsusf_spc"";  this addBackpack ""B_Carryall_cbr"";  this addItemToBackpack ""Medikit"";  for ""_i"" from 1 to 10 do {this addItemToBackpack ""FirstAidKit"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShellGreen"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""Chemlight_green"";};  for ""_i"" from 1 to 5 do {this addItemToBackpack ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""B_IR_Grenade"";};  this addHeadgear ""rhsusf_ach_bare_tan_headset_ess"";    comment ""Add weapons"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""tf_anprc148jem_1"";  this linkItem ""ItemGPS"";  ";
 					description="Search and Rescue";
 				};
@@ -2245,7 +2253,7 @@ class Mission
 					skill=1;
 					text="leader9";
 					init="this setGroupID [""Vulcher""];comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShellGreen"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""Chemlight_green"";};  this addHeadgear ""H_PilotHelmetHeli_B"";    comment ""Add weapons"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152"";  this linkItem ""ItemGPS"";  ";
-					description="AH-64D Pilot";
+					description="Gunship Pilot";
 					syncId=27;
 					synchronizations[]={28};
 				};
@@ -2261,7 +2269,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=1;
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShellGreen"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""Chemlight_green"";};  this addHeadgear ""H_PilotHelmetHeli_B"";    comment ""Add weapons"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152"";  this linkItem ""ItemGPS"";  ";
-					description="AH-1Z Pilot";
+					description="Gunship Pilot";
 				};
 				class Item2
 				{
@@ -2270,12 +2278,13 @@ class Mission
 					special="NONE";
 					id=80;
 					side="WEST";
-					vehicle="rhsusf_airforce_pilot";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=1;
+					text="medic8";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShellGreen"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""Chemlight_green"";};  this addHeadgear ""H_PilotHelmetHeli_B"";    comment ""Add weapons"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152"";  this linkItem ""ItemGPS"";  ";
-					description="AH-64D Gunner";
+					description="Gunship Gunner / Medic";
 				};
 				class Item3
 				{
@@ -2284,12 +2293,13 @@ class Mission
 					special="NONE";
 					id=81;
 					side="WEST";
-					vehicle="rhsusf_airforce_pilot";
+					vehicle="rhsusf_army_ucp_medic";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=1;
+					text="medic7";
 					init="comment ""Exported from Arsenal by Sean"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShellGreen"";};  for ""_i"" from 1 to 3 do {this addItemToUniform ""SmokeShell"";};  for ""_i"" from 1 to 2 do {this addItemToUniform ""Chemlight_green"";};  this addHeadgear ""H_PilotHelmetHeli_B"";    comment ""Add weapons"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""tf_microdagr"";  this linkItem ""tf_anprc152"";  this linkItem ""ItemGPS"";  ";
-					description="AH-1Z Gunner";
+					description="Gunship Gunner / Medic";
 				};
 			};
 		};
@@ -2429,7 +2439,7 @@ class Mission
 				class Item1
 				{
 					position[]={15305.736,17.472664,17444.639};
-					azimut=229.17195;
+					azimut=229.172;
 					id=87;
 					side="WEST";
 					vehicle="rhsusf_army_ocp_combatcrewman";
@@ -2440,14 +2450,15 @@ class Mission
 				class Item2
 				{
 					position[]={15303.697,17.490417,17446.818};
-					azimut=229.17195;
+					azimut=229.172;
 					id=88;
 					side="WEST";
-					vehicle="rhsusf_army_ocp_combatcrewman";
+					vehicle="rhsusf_army_ocp_medic";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
-					description="Mortar Assistant Gunner";
+					text="medic4";
+					description="Mortar Assistant Gunner / Medic";
 				};
 			};
 		};
