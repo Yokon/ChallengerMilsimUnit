@@ -1,5 +1,5 @@
 //["Hostage", 1, false, 2, [2,2], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",6] execVM "LV\fillHouse.sqf";
-private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_missionType", "_milAmount", "_timeLimit", "_safeZone",
+private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_missionType", "_milAmount", "_timeLimit", "_safeZone", "_hostagePos",
 		"_safepow", "_rescueMarker", "_trDist", "_fillHouse", "_vehAmount", "_vehSpawn", "_kilo", "_marker", "_markerBound"];
 ///////////////////////////////
 _cityName	 = _this select 0;
@@ -38,21 +38,21 @@ _rescueMarker = createMarker["recueMarker", _safeZone];
 _rescueMarker setMarkerShape "icon";
 _rescueMarker setMarkerType "mil_warning";
 _rescueMarker setMarkerColor "ColorYellow";
-_rescueMarker setMarkerAlpha 1;
+_rescueMarker setMarkerAlpha 0;
 _rescueMarker setMarkerSize [1,1];
 
 //Spawn the troops!
-//["Hostage",2,_objDist,[true,false],_vehSpawn,false,_milAmount,_vehAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
-//sleep 10;
-//["Hostage",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
-//sleep 2;
+["Hostage",2,_objDist,[true,false],_vehSpawn,false,_milAmount,_vehAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
+sleep 10;
+["Hostage",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
+sleep 2;
 ["Hostage", 1, false, 2, [1,0], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",6] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
   callToStart = true;
   [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,false] call BIS_fnc_MP;
-  sleep 10;
+  sleep 30;
 };
 
 while {!callToStart} do {
@@ -90,11 +90,15 @@ while {_kilo > 0} do {
 		};
 		if(captive _x) then {
 			countpow = countpow + 1;
+				powPos = position _x;
+				[countpow, powPos] call core_fnc_trackHostage;
 		}
 	} foreach allUnits;
 	{
 		if(captive _x && (_safeZone distance _x < 40)) then {
-			safepow = safepow + 1;
+			if (vehicle _x != _x) then {
+				safepow = safepow + 1;
+			};
 		}
 	} foreach allUnits;
 	if (safepow == countpow) then {
@@ -118,16 +122,13 @@ while {_kilo > 0} do {
 	  missionEndID = 1;
 	};
 	[[unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
+	[[countpow, safepow],"MMC_fnc_sharePowCount",true,false] call BIS_fnc_MP;
 	sleep 3;
 };
+sleep 15;
 
-deleteMarker "Hostage";
-deleteMarker "ObjBound";
-deleteMarker "unit1";
-deleteMarker "unit2";
-deleteMarker "unit3";
-deleteMarker "unit4";
-deleteMarker "unit5";
+call core_fnc_cleanupGeneral;
+call core_fnc_cleanupHostage;
 
 {    
 	if(side _x == opfor) then 

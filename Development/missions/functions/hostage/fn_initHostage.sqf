@@ -27,10 +27,3 @@ _npc setUnitPos "MIDDLE";
 _aiPos = getPos _npc;
 
 _name = format["%1", _npc];
-systemChat format["%1 @ %2", _name, _aiPos];
-_leader1Marker = createMarker [format["%1",_name], _aiPos];
-_leader1Marker setMarkerShape "icon";
-_leader1Marker setMarkerType "mil_dot";
-_leader1Marker setMarkerColor "ColorGreen";
-_leader1Marker setMarkerSize [0.5,0.5];
-_leader1Marker setMarkerAlpha 1;

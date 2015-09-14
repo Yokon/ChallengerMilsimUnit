@@ -15,5 +15,11 @@ pvpfw_chatIntercept_allCommands = [
 			_argument = _this select 0;
 			systemChat format["Remaining: %1",troopCount];
 		}
+	],
+	[
+		"pow",
+		_argument = _this select 0;
+		systemChat format["Total POWS: %1", powCount];
+		systemChat format["Safe POWS: %1", safepow];
 	]
 ];

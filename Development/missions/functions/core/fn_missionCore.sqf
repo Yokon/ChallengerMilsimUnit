@@ -94,13 +94,7 @@ while {_kilo > 0} do {
 	sleep 3;
 };
 
-deleteMarker "Capture";
-deleteMarker "ObjBound";
-deleteMarker "unit1";
-deleteMarker "unit2";
-deleteMarker "unit3";
-deleteMarker "unit4";
-deleteMarker "unit5";
+call core_fnc_cleanupGeneral;
 
 {    
 	if(side _x == opfor) then 

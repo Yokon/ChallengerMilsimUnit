@@ -204,4 +204,3 @@ if(_missionType == "capture") then {
 if (_missionType == "hostage") then {
 	[_cityName, _MarkPosX, _MarkPosY, _objDist, _missionType, _milAmount, _fillHouse, _vehAmount, _vehSpawn] spawn core_fnc_hostageCore;
 };
-//[_cityName, _MarkPosX, _MarkPosY, _objDist, _missionType, _milAmount, _fillHouse, _vehAmount, _vehSpawn] spawn core_fnc_missionCore;
