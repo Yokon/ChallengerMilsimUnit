@@ -20,7 +20,9 @@ else
 };
 
 [] execVM "G_Revive_init.sqf";
-
-	[]execVM "missions\cfgMissions.sqf";
-	[] spawn core_fnc_initMission;
-
+sleep 0.1;
+[] execVM "briefing.sqf"; //Load Briefing
+sleep 0.1;
+[]execVM "missions\cfgMissions.sqf";
+sleep 0.1;
+[] spawn core_fnc_initMission;

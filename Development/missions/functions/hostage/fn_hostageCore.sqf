@@ -46,7 +46,7 @@ _rescueMarker setMarkerSize [1,1];
 sleep 10;
 ["Hostage",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
-["Hostage", 1, false, 2, [1,0], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",6] execVM "LV\fillHouse.sqf";
+["Hostage", 1, false, 2, [2,3], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",3] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
