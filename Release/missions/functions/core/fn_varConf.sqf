@@ -1,5 +1,7 @@
 // 0 = location
 // 1 = Mission Type (Later Expansion) {0 = capture}
+private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_milAmount", "_fillHouse", "_vehAmount", "_vehSpawn", "_missionType", "_location", "_MType"];
+
 _location = _this select 0;
 _MType = _this select 1;
 
@@ -7,184 +9,184 @@ switch (_location) do
 { 
 	case "athira" : 
 	{
-		cityName = "Athira";
-		MarkPosX = 14119.3;
-		MarkPosY = 18771.4;
-		objDist = 400;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Athira";
+		_MarkPosX = 14119.3;
+		_MarkPosY = 18771.4;
+		_objDist = 400;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "agiosDionysios" : 
 	{
-		cityName = "Agios Dionysios";
-		MarkPosX = 9323.11;
-		MarkPosY = 15868.7;
-		objDist = 425;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Agios Dionysios";
+		_MarkPosX = 9323.11;
+		_MarkPosY = 15868.7;
+		_objDist = 425;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "charkia" : 
 	{
-		cityName = "Charkia";
-		MarkPosX = 18213;
-		MarkPosY = 15307.9;
-		objDist = 400;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Charkia";
+		_MarkPosX = 18213;
+		_MarkPosY = 15307.9;
+		_objDist = 400;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "dorida" : 
 	{
-		cityName = "Dorida";
-		MarkPosX = 19404.744;
-		MarkPosY = 13250.399;
-		objDist = 180;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Dorida";
+		_MarkPosX = 19404.744;
+		_MarkPosY = 13250.399;
+		_objDist = 180;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "poliakko" : 
 	{
-		cityName = "Poliakko";
-		MarkPosX = 10974;
-		MarkPosY = 13387.9;
-		objDist = 300;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Poliakko";
+		_MarkPosX = 10974;
+		_MarkPosY = 13387.9;
+		_objDist = 300;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "pyrgos" : 
 	{
-		cityName = "Pyrgos";
-		MarkPosX = 17100.3;
-		MarkPosY = 12801.3;
-		objDist = 725;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Pyrgos";
+		_MarkPosX = 17100.3;
+		_MarkPosY = 12801.3;
+		_objDist = 725;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "Molos" : 
 	{
-		cityName = "Molos";
-		MarkPosX = 27020.8;
-		MarkPosY = 23229.4;
-		objDist = 200;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Molos";
+		_MarkPosX = 27020.8;
+		_MarkPosY = 23229.4;
+		_objDist = 200;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "Kore" : 
 	{
-		cityName = "Kore";
-		MarkPosX = 7149.2;
-		MarkPosY = 16481.2;
-		objDist = 190;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Kore";
+		_MarkPosX = 7149.2;
+		_MarkPosY = 16481.2;
+		_objDist = 190;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "Syrta" : 
 	{
-		cityName = "Syrta";
-		MarkPosX = 8639.84;
-		MarkPosY = 18265.4;
-		objDist = 190;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Syrta";
+		_MarkPosX = 8639.84;
+		_MarkPosY = 18265.4;
+		_objDist = 190;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 	
 	case "Galati" : 
 	{
-		cityName = "Galati";
-		MarkPosX = 10325.2;
-		MarkPosY = 19060;
-		objDist = 120;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Galati";
+		_MarkPosX = 10325.2;
+		_MarkPosY = 19060;
+		_objDist = 120;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "Oreokastro" : 
 	{
-		cityName = "Oreokastro";
-		MarkPosX = 4569.57;
-		MarkPosY = 21393.8;
-		objDist = 125;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Oreokastro";
+		_MarkPosX = 4569.57;
+		_MarkPosY = 21393.8;
+		_objDist = 125;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 	
 	case "Ifestiona" : 
 	{
-		cityName = "Ifestiona";
-		MarkPosX = 12827.3;
-		MarkPosY = 19657;
-		objDist = 125;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Ifestiona";
+		_MarkPosX = 12827.3;
+		_MarkPosY = 19657;
+		_objDist = 125;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 	
 	case "North Airfield" : 
 	{
-		cityName = "North Airfield";
-		MarkPosX = 9161.9;
-		MarkPosY = 21567.9;
-		objDist = 170;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "North Airfield";
+		_MarkPosX = 9161.9;
+		_MarkPosY = 21567.9;
+		_objDist = 170;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 
 	case "Panochori" : 
 	{
-		cityName = "Panochori";
-		MarkPosX = 5089.88;
-		MarkPosY = 11261.6;
-		objDist = 200;
-		milAmount = [20,10];
-		fillHouse = [5,5];
-		vehAmount = [2,3];
-		vehSpawn = [true,false,false];
-		missionType = _MType;
+		_cityName = "Panochori";
+		_MarkPosX = 5089.88;
+		_MarkPosY = 11261.6;
+		_objDist = 200;
+		_milAmount = [20,10];
+		_fillHouse = [5,5];
+		_vehAmount = [2,3];
+		_vehSpawn = [true,false,false];
+		_missionType = _MType;
 	};
 	
 	default
@@ -196,16 +198,9 @@ switch (_location) do
 
 sleep 3;
 
-[cityName, MarkPosX, MarkPosY, objDist, missionType, milAmount, fillHouse, vehAmount, vehSpawn] spawn core_fnc_missionCore;
-
-sleep 3;
-
-cityName = nil;
-MarkPosX = nil;
-MarkPosY = nil;
-objDist = nil;
-missionType = nil;
-milAmount = nil;
-fillHouse = nil;
-vehAmount = nil;
-vehSpawn = nil;
+if(_missionType == "capture") then {
+	[_cityName, _MarkPosX, _MarkPosY, _objDist, _missionType, _milAmount, _fillHouse, _vehAmount, _vehSpawn] spawn core_fnc_missionCore;
+};
+if (_missionType == "hostage") then {
+	[_cityName, _MarkPosX, _MarkPosY, _objDist, _missionType, _milAmount, _fillHouse, _vehAmount, _vehSpawn] spawn core_fnc_hostageCore;
+};

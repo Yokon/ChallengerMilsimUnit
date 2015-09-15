@@ -6,7 +6,7 @@ G_Enemy_AI_Unconscious = false; //true = Enemy AI can be revived, dragged, and c
 G_Briefing = true; //true = information, how to, and credits will be displayed on ingame briefing screen. Can be used in conjunction with your own briefing. False = disabled. 
 
 //Revive
-G_Revive_System = true; //Whether the revive system will be used or not. True = enabled, false = disabled.
+G_Revive_System = false; //Whether the revive system will be used or not. True = enabled, false = disabled.
 G_Revive_Time_Limit = -1; //Amount of time (in seconds) before unit is available to be revived, before being forced to respawn. If -1, no time limit.
 G_Revive_DownsPerLife = 0; //Number of times unit can go Unconscious in single life. 0 = Unlimited, integer > 0 = limit of downs per life.
 G_Revive_Can_Revive = []; //Classnames of units that can revive. Wrap in quotes, separate by commas. If empty, all can revive.

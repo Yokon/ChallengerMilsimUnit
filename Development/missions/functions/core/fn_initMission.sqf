@@ -21,7 +21,7 @@ if (allowMarkers) then {
 sleep 1;
 
 
-[] call core_fnc_unitTracker;
+//[] call core_fnc_unitTracker;
 
 sleep 3;
 aiSkillSet = [aiAccuracy,aiAimShake,aiAimSpeed,aiSpotDistance,aiSpotTime,aiCourage,aiCommanding,aiGeneral,aiEndurance,aiReloadSpeed];

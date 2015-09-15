@@ -1,4 +1,5 @@
-
+private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_missionType", "_milAmount", "_timeLimit",
+		"_trDist", "_fillHouse", "_vehAmount", "_vehSpawn", "_kilo", "_marker", "_markerBound"];
 
 _cityName = _this select 0;
 _MarkPosX = _this select 1;
@@ -15,7 +16,7 @@ _trDist = _objDist + 50;
 // Objective marker
 _marker = createMarker["Capture", [_MarkPosX,_MarkPosY]];
 _marker setMarkerShape "icon";
-_marker setMarkerType "hd_objective";
+_marker setMarkerType "mil_objective";
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Capture";
 _marker setMarkerAlpha 0;
@@ -30,14 +31,28 @@ _markerBound setMarkerAlpha 0;
 _markerBound setMarkerSize [_objDist,_objDist];
 
 //Spawn the troops!
-["Capture",2,_objDist,[true,false],_vehSpawn,false,_milAmount,_vehAmount,aiSkillSet,nil,nil,1] execVM "LV\militarize.sqf";
+[
+	"Capture",
+	2,
+	_objDist,
+	[true,false],
+	_vehSpawn,
+	false,
+	_milAmount,
+	_vehAmount,
+	aiSkillSet,
+	nil,
+	nil,
+	1
+] execVM "LV\militarize.sqf";
+
 sleep 10;
 ["Capture",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
 
 if (firstMission) then {
   callToStart = true;
-  [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,true] call BIS_fnc_MP;
+  [{systemChat format["Stand By Initializing First Mission..."];},"BIS_fnc_spawn",true,false] call BIS_fnc_MP;
   sleep 30;
 };
 
@@ -91,15 +106,10 @@ while {_kilo > 0} do {
 	};
 	[[unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
 	sleep 3;
+	[unitCount] call core_fnc_cleanTracks;
 };
 
-deleteMarker "Capture";
-deleteMarker "ObjBound";
-deleteMarker "unit1";
-deleteMarker "unit2";
-deleteMarker "unit3";
-deleteMarker "unit4";
-deleteMarker "unit5";
+call core_fnc_cleanupGeneral;
 
 {    
 	if(side _x == opfor) then 

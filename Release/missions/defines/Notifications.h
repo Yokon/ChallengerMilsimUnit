@@ -38,3 +38,27 @@ class missionFailedTime
 	duration = 5;
 	priority = 1;
 };
+class missionHostageStart
+{
+	title = "Rescue Orders Recieved";
+	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+	description = "Rescue The POWS In %1";
+	duration = 5;
+	priority = 1;
+};
+class missionHostageComplete
+{
+	title = "Rescue Mission Complete";
+	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+	description = "Successfully Rescued %1 POWS";
+	duration = 5;
+	priority = 1;
+};
+class missionHostageFailed
+{
+	title = "Rescue Mission Failed -- %1";
+	iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+	description = "Failed To Rescue The POWS...";
+	duration = 5;
+	priority = 1;
+};
