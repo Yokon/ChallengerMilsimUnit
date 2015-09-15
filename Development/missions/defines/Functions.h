@@ -12,6 +12,7 @@ class Mission_Core
 		class setUnitMarker {};
 		class unitTracker {};
 		class cleanupGeneral {};
+		class cleanTracks {};
 	};
 	class Hostage
 	{
@@ -22,6 +23,8 @@ class Mission_Core
 		class initHostage {};
 		class trackHostage {};
 		class cleanupHostage {};
+		class hostageFollowAction {};
+		class hostageStayAction {};
 	};
 };
 class Mission_Editor 

@@ -1,4 +1,3 @@
-//["Hostage", 1, false, 2, [2,2], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",6] execVM "LV\fillHouse.sqf";
 private ["_cityName", "_MarkPosX", "_MarkPosY", "_objDist", "_missionType", "_milAmount", "_timeLimit", "_safeZone", "_hostagePos",
 		"_safepow", "_rescueMarker", "_trDist", "_fillHouse", "_vehAmount", "_vehSpawn", "_kilo", "_marker", "_markerBound"];
 ///////////////////////////////
@@ -46,8 +45,12 @@ _rescueMarker setMarkerSize [1,1];
 sleep 10;
 ["Hostage",2,true,1,_fillHouse,_objDist,aiSkillSet,nil,nil,2] execVM "LV\fillHouse.sqf";
 sleep 2;
-["Hostage", 1, false, 2, [2,3], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"null = [this] spawn core_fnc_initHostage;",3] execVM "LV\fillHouse.sqf";
+["Hostage", 1, false, 2, [1,0], 150, [0.7,0.6,0.8,0.35,0.5,1,1,0.6,1,1],nil,"nul = [[this],'core_fnc_initHostage',true,true] call BIS_fnc_MP;",3] execVM "LV\fillHouse.sqf";
 sleep 2;
+
+
+
+
 
 if (firstMission) then {
   callToStart = true;
@@ -96,7 +99,7 @@ while {_kilo > 0} do {
 	} foreach allUnits;
 	{
 		if(captive _x && (_safeZone distance _x < 40)) then {
-			if (vehicle _x != _x) then {
+			if (vehicle _x == _x) then {
 				safepow = safepow + 1;
 			};
 		}
@@ -121,11 +124,12 @@ while {_kilo > 0} do {
 	  _kilo = 0;
 	  missionEndID = 1;
 	};
+	[unitCount] call core_fnc_cleanTracks;
 	[[unitCount],"MMC_fnc_shareUnitCount",true,false] call BIS_fnc_MP;
 	[[countpow, safepow],"MMC_fnc_sharePowCount",true,false] call BIS_fnc_MP;
 	sleep 3;
 };
-sleep 15;
+sleep 10;
 
 call core_fnc_cleanupGeneral;
 call core_fnc_cleanupHostage;

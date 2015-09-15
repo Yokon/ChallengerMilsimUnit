@@ -3,9 +3,8 @@ _npc 	= _this select 0;
 _caller = _this select 1;
 _id 	= _this select 2;
 
-
+[[_npc],"core_fnc_hostageStayAction",true,true] call BIS_fnc_MP;
 removeAllActions _npc;
-_npc addaction ["<t color=""#FFFF00"">" + "Follow", core_fnc_joinSquad];
 _npc setUnitPos "MIDDLE";
 
 
